@@ -37,6 +37,10 @@ public class WeatherForecastController : ControllerBase
     [Route("[action]")]
     public IEnumerable<WeatherForecast> GetW()
     {
+    
+        //EN EL appsettings se debe colocar un nivel de log bajo como debug para poder mostrar todos los tipos de errores
+        //que están en un nivel superior https://learn.microsoft.com/en-us/aspnet/core/fundamentals/logging/?view=aspnetcore-6.0
+        
         _logger.LogDebug("Retornando la lista de weatherforecast");
         return ListWeatherForecast;
     }
