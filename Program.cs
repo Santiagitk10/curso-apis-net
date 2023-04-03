@@ -22,6 +22,9 @@ app.UseAuthorization();
 
 //app.UseWelcomePage();
 
+//Los middleware customs van después del Authorization. 
+//Acá no se pasa el builder en el parámetro, porque en la clase del middleware se usa this en el parámetro. El app de
+//por sí es el builder que envío
 app.UseTimeMiddleware();
 
 app.MapControllers();
