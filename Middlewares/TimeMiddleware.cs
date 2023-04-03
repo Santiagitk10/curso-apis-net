@@ -1,3 +1,7 @@
+
+
+//UN MIDDLEWARE VA A TOMAR TODO EL REQUERIMIENTO Y VA A HACER ALGO ANTES DE MANDAR LA RESPUESTA. VA A INTERCEPTAR TODA LA RESPUESTA
+
 public class TimeMiddleware
 {
     //Se usa para hacer el llamado al siguiente middleware
