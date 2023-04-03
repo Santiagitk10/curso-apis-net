@@ -1,5 +1,6 @@
 public class TimeMiddleware
 {
+    //Se usa para hacer el llamado al siguiente middleware
     readonly RequestDelegate next;
 
     public TimeMiddleware(RequestDelegate nextRequest)
@@ -7,6 +8,7 @@ public class TimeMiddleware
         next = nextRequest;
     }
 
+    //HttpContext representa el requerimiento que viene en la petición http
     public async Task Invoke(Microsoft.AspNetCore.Http.HttpContext context)
     {
         if(context.Request.Query.Any(p=> p.Key == "time"))
