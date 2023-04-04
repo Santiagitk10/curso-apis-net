@@ -9,6 +9,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 //builder.Services.AddScoped<IHelloWorldService, HelloWorldService>();
+//Esta forma es más conveniente cuando se necesita pasar algún parámetro
 builder.Services.AddScoped<IHelloWorldService>(p=> new HelloWorldService());
 builder.Services.AddScoped<ICategoriaService, CategoriaService>();
 builder.Services.AddScoped<ITareasService, TareasService>();
